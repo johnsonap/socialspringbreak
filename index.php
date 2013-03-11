@@ -21,17 +21,15 @@
 	        			<span class="icon-bar"></span>
 	        			<span class="icon-bar"></span>
 	        		</a>	
+	        		<!--<img class="hidden-phone" src="img/newsherald-inverted.png" id="logo" /> -->
 
-
-	        		<a class="brand" href="#">Spring Break</a>
+	        		   <a class="brand" href="#">Spring Break</a>
 	        		<div class="nav-collapse collapse">
 	        			<ul class="nav">
 	        				<li class="active"><a href="#">Stream</a></li>
 	        				<li class="active"><a href="#map">Map</a></li>	
 	        			</ul>
 	        		</div>
-	        		<img class="hidden-phone" src="img/newsherald-inverted.png" id="logo" />
-	        		
 	        	</div>
 	        </div>
         </div>
@@ -134,20 +132,7 @@
 			
 			window.galleryList = new GalleryList();
 			
-			galleryList.reset(<?php 
-				$xml = simplexml_load_file("http://www.emeraldcoastphotoseast.com/datafeeds/18686.xml");
-
-				foreach($xml as $album){
-					$album->type = 'gallery';
-					$album->approved = '1';
-					$album->prettyTime = date('F j, Y', strtotime($album->date));
-					$str .= json_encode($album) . ',';
-					$n++;
-				}
-				
-				echo '[' .substr($str, 0, strlen($str)-1) . ']'; 
-			?>);
-			
+			galleryList.fetch();			
 			window.storyList = new StoryList();
 			
 			storyList.reset(<?php 
