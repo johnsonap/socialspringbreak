@@ -78,7 +78,7 @@
 				<p class="instagram-caption"><% if(data.caption !== null){ %><%= data.caption.text %><% } %></p>
 		    </div>
 		    
-		    <span class="card-footer"><i class="logo">&nbsp;</i><p><%= fromNow %></p> <span class="username"><a href="http://instagram.com/<%= data.user.username %>" target="_blank">@<%= data.user.username %></a></span> </span>
+		    <span class="card-footer"><div class="logo"><i class="logo"></i></div><%= fromNow %> <span class="username"><a href="http://instagram.com/<%= data.user.username %>" target="_blank">@<%= data.user.username %></a></span> </span>
 		
 		</script>
 		
@@ -93,7 +93,7 @@
 			
 			</div>
 			<ul class="card-footer">
-				<li class="logo"><i class="icon-twitter"></i></li>
+				<li class="logo"><i class="icon-twit"></i></li>
 				<li class="time-container"><a href="http://www.twitter.com/<%= data.user.screen_name %>/status/<%= data.id_str %>" target="_blank"> <!--Via <a href="http://twitter.com/<%= data.user.screen_name %>" target="_blank">@<%= data.user.screen_name %></a>--><%= fromNow %></a></li>
 				<li class="reply-container"><a href="https://twitter.com/intent/tweet?in_reply_to=<%= data.id_str %>" target="_blank" title="Reply"><i class="icon-reply"></i> <b>Reply</b></a></li>
 				<li class="retweet-container"><a href="https://twitter.com/intent/retweet?tweet_id=<%= data.id_str %>" target="_blank" title="Retweet"><i class="icon-retweets"></i> <b>Retweet</b></a></li>
@@ -140,29 +140,22 @@
 		<script src="js/moment.min.js"></script>
 		<script src="js/models/models.js"></script>     
 		<script src="js/views/StreamView.js"></script>   
+
 		<script> 	
 			window.galleryList = new GalleryList(<?php
-				$xml = simplexml_load_file("http://www.emeraldcoastphotoseast.com/datafeeds/18686.xml");
-				foreach($xml as $album){
-					$album->type = 'gallery';
-					$album->approved = '1';
-					$album->prettyTime = date('F j, Y', strtotime($album->date));
-					$str .= json_encode($album) . ',';
-					$n++;
-				}
-				echo '[' .substr($str, 0, strlen($str)-1) . ']';
+				$filename = "feeds/galleryfeed.json";
+				$handle = fopen($filename, "r");
+				$contents = fread($handle, filesize($filename));
+				echo $contents;
+				fclose($handle);
 			?>);
 			
-			window.storyList = new StoryList(<?php 
-				$xml = simplexml_load_file('http://www.newsherald.com/cmlink/1.105375','SimpleXMLElement', LIBXML_NOCDATA);		
-				foreach($xml->channel->item as $album){
-					$album->imageUrl = $album->enclosure->attributes()->url;
-					$album->type = 'story';
-					$album->approved = '1';
-					$album->prettyTime = date('F j, Y', strtotime($album->pubDate));
-					$str .= json_encode($album) . ',';
-				}
-				echo '[' . substr($str, 0, strlen($str)-1) . ']';
+			window.storyList = new StoryList(<?php
+				$filename = "feeds/storyfeed.json";
+				$handle = fopen($filename, "r");
+				$contents = fread($handle, filesize($filename));
+				echo $contents;
+				fclose($handle);
 			?>);
 		</script>
 		<script src="js/main.js"></script>   

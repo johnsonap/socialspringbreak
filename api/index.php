@@ -9,13 +9,9 @@ error_reporting(E_ALL & E_STRICT);
 $app = new Slim();
 
 $app->get('/allcards', 'all');
-
 $app->get('/approved',  'approved');
-
 $app->get('/onlyapproved',  'onlyapproved');
-
 $app->put('/allcards/:id', 'saveCard');
-
 $app->put('/approved/:id', 'saveCard');
 $app->get('/stories', 'storyList');
 $app->get('/galleries', 'galleryList');
@@ -52,7 +48,15 @@ function galleryList(){
 		$str .= json_encode($album) . ',';
 		$n++;
 	}
-	echo '[' .substr($str, 0, strlen($str)-1) . ']';
+	
+	$content = '[' .substr($str, 0, strlen($str)-1) . ']';
+	$filename = '../feeds/galleryfeed.json';
+
+	
+	$handle = fopen($filename, 'w');
+	fwrite($handle, $content);
+	
+	fclose($handle);
 }
 
 function storyList(){
@@ -64,18 +68,18 @@ function storyList(){
 		$album->prettyTime = date('F j, Y', strtotime($album->pubDate));
 		$str .= json_encode($album) . ',';
 	}
-	echo '[' . substr($str, 0, strlen($str)-1) . ']';
+	
+	$content = '[' . substr($str, 0, strlen($str)-1) . ']';
+	$filename = '../feeds/storyfeed.json';
+
+	
+	$handle = fopen($filename, 'w');
+	fwrite($handle, $content);
+	
+	fclose($handle);
 }
 
 
-function test(){
-	connection();
-	$testQuery = "SELECT * FROM cards";
-	$results = mysql_query($testQuery);
-	while($row = mysql_fetch_assoc($results)){     
-	     echo json_encode($row);
-	}
-}
 
 function approved(){
 	getCards(0);
@@ -101,6 +105,7 @@ function getCards($approved) {
 	if($approved == 2){
 		$sql = "SELECT * FROM cards WHERE approved>=1 ORDER BY time DESC LIMIT 500";	
 	}
+	
 	else if($approved == 0){
 		$sql = "SELECT * FROM cards WHERE approved>=1 ORDER BY time DESC LIMIT 300";	
 	}

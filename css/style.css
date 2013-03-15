@@ -1,10 +1,11 @@
 @media screen and (min-width :1005px) {
-	body
-	{
-		padding-top:60px
-	}
+	
 }
 
+body {
+	padding-top:60px
+}
+	
 body
 {
 	background:#7A8794
@@ -17,12 +18,10 @@ h1
 
 img#logo
 {
-	padding:10px;
 	width:200px;
-	display:inline;
+	height: 19px;
 	float:right;
-	margin-left:20px;
-	margin-right:0
+	margin: 10px 5px 0;
 }
 
 .box{
@@ -76,10 +75,10 @@ img#logo.visible-phone
 position: fixed;
 bottom: 16px;
 right: 17px;
-font-size: 19px;
+font-size: 30px;
 color: #fff;
 background: #000;
-padding: 6px 9px 5px;
+padding: 10px 11px 5px;
 display: none;
 cursor: pointer;
 }
@@ -359,6 +358,9 @@ p.tweet-text a:hover,p.tweet-text a:active
 	margin-bottom:10px
 }
 
+* html .account-group { display:inline; }  /* for IE 6 */
+* + html .account-group { display:inline; }  /* for IE 7 */
+
 img.small-logo
 {
 	height:10px
@@ -412,14 +414,26 @@ img.small-logo
 	border:0 none
 }
 
-.icon-twitter
+.icon-twit
 {
 	color:#fff;
 	font-size:18px;
 	margin:0;
-	width:20px;
-	height:20px
+
+	padding:0px;
+	height:36px;
+	width: 36px !important;
+	background: url('../img/twitter-block-small.png');
+
 }
+
+@media (-webkit-min-device-pixel-ratio: 2),  ( min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1),  (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) { 
+      .icon-twit {	
+        background-image: url('../img/twitter-block.png');
+        background-size: cover;
+      }
+}
+
 
 .gallery-preview
 {
@@ -505,13 +519,16 @@ img.small-logo
 
 .instagram-card .card-footer i.logo
 {
-	background:url(../img/instagram-block.png);
-	padding:11px 18px;
-	margin-left:-8px;
-	background-position:-8px -10px;
-	background-size:54px
+	background:url('../img/instagram-block-small.png');
+	margin: -8px 0 0 -8px;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2),  ( min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1),  (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) { 
+      .instagram-card .card-footer i.logo {	
+        background-image: url('../img/instagram-block.png');
+        background-size: cover;
+      }
+}
 .twitter-card
 {
 	padding:0;
@@ -524,10 +541,12 @@ img.small-logo
 	padding-bottom:25px
 }
 
-.twitter-card .card-footer .logo
+.card-footer .logo
 {
-	background:#00acee;
-	padding:9px 8px 7px;
+
+	padding:0px;
+	height:36px;
+	width: 36px;
 	float:left
 }
 
@@ -562,6 +581,9 @@ img.small-logo
 	font-size:12px;
 	padding:8px 0 8px 8px
 }
+
+* html .twitter-card ul li { display:inline; }  /* for IE 6 */
+* + html .twitter-card ul li { display:inline; }  /* for IE 7 */
 
 .twitter-card ul li.favorite-container
 {
@@ -679,18 +701,6 @@ li.reply-container,li.retweet-container
 		margin:0;
 		position:absolute;
 		top:0
-	}
-	
-	#scroll-to-top{
-		position: fixed;
-		bottom: 16px;
-		right: 17px;
-		font-size: 19px;
-		color: #fff;
-		background: #000;
-		padding: 6px 9px 5px;
-		display: none;
-		cursor: pointer;
 	}
 	
 	.grid-card
