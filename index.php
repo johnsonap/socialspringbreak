@@ -235,20 +235,7 @@
 			<img src="http://freedom.112.2o7.net/b/ss/finewsherald/1/H.25.1--NS/0" height="1" width="1" border="0" alt="" />
 		</noscript><!--/DO NOT REMOVE/-->
 		<!-- End SiteCatalyst code version: H.25.1. -->
-        
-        <script type="text/javascript">
-			var _gauges = _gauges || [];
-			(function() {
-			var t   = document.createElement('script');
-			t.type  = 'text/javascript';
-			t.async = true;
-			t.id    = 'gauges-tracker';
-			t.setAttribute('data-site-id', '5143b1c1613f5d65800000a5');
-			t.src = '//secure.gaug.es/track.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(t, s);
-			})();
-		</script>
+
 		
 	</body>
 </html>
