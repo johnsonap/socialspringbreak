@@ -1,432 +1,354 @@
-@media screen and (min-width :1005px){
-	body{
-		padding-top:60px;
-	
+@media screen and (min-width :1005px) {
+	body
+	{
+		padding-top:60px
 	}
 }
 
-
-body{
-	background: #7A8794;
+body
+{
+	background:#7A8794
 }
 
-
-img#logo{
-	padding: 10px;
-	width: 200px;
-	display: inline;
-	float: right;
-	margin-left: 20px;
-	margin-right: 0px;
+h1
+{
+	margin:10px
 }
 
-
-.navbar-inverse .navbar-inner {
-	border-bottom: #000;
-	background: #000;
-}
-img#logo.visible-phone{
-	height: 10px;
-	width: 10px;
-}
-#approval-bar{
-	border-top:1px solid #ccc;
-	padding: 0px;
-	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+img#logo
+{
+	padding:10px;
+	width:200px;
+	display:inline;
+	float:right;
+	margin-left:20px;
+	margin-right:0
 }
 
-
-
-#approval-bar .btn{
-	background: none;
-	opacity: .8;
-	border-radius: 0px;
-	border: none;
-	box-shadow: none;
-	padding: 7px 25px;
-	border-right: 1px solid #ccc;
-	width: 50px;
-	text-align: center;
-	-webkit-tap-highlight-color: #ccc;
-}
-
-
-#approval-bar .btn-danger{
-
-	background: #e28383;
-}	
-
-#approval-bar .btn-success{
-
-	background: #b3d78c;
-}	
-
-
-/* --  Leaflet Styling	-- */
- 
-.leaflet-marker-icon div{
-	position: relative;
-	top: 0px;
-	font-size: 12px;
-	width:1px;
-	text-align: center;
-}
-
-.leaflet-div-icon {
-	background: transparent;
-	border: none;
-}
-
-.leaflet-popup-content{
-	line-height: 21px;
-}
-
-.leaflet-marker-icon div{
-	height:9px;
-	width: 9px;
-	-webkit-border-radius:	10px;
-	-moz-border-radius:		10px;
-	border-radius:			10px;
-	background: #ebebeb;
-	border: 1px solid #222;
-}
-
-.leaflet-popup img.main-photo{
-		height:310px;
-		-webkit-border-radius: 2px 2px 0px 0px;
-		border-radius: 2px 2px 0px 0px;
-}
-
-
-
-.leaflet-popup-content { margin: 0px; margin-bottom: 15px; }
-
-.leaflet-popup-content-wrapper{
-	box-shadow: 0 3px 7px rgba(0,0,0,0.1);
-	border: 1px solid #aaa;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-}
-
-.leaflet-popup-tip-container {
-	margin-top: -1px;
-
-}
-
-.leaflet-popup-tip {
-	width: 15px;
-	height: 15px;
-	padding: 0px;
-	margin: -8px auto 0;
-	border: 1px solid #888;
-}
-
-
-#legend{
-	z-index: 9999;
-	position: absolute;
-	display: inline-block;
-	width:auto;
-	height:auto;
+.box{
 	background: #fff;
-	padding: 4px 10px;
-	left: 10px;
-	bottom:10px;
-	border:1px solid #888;
-	-webkit-border-radius:1px;
-	-moz-border-radius:1px;
-	border-radius:1px;
+	padding: 20px 30px;;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	
 }
 
-#legend ul{
+
+.box p{
+	margin-bottom: 15px;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.box h1{
+	text-align: center;
+	margin-bottom: 30px;
+	
+}
+
+.navbar-inverse .navbar-inner
+{
+	border-bottom:#000;
+	background:#000
+}
+
+img#logo.visible-phone
+{
+	height:10px;
+	width:10px
+}
+
+#approval-bar
+{
+	border-top:1px solid #ccc;
 	padding:0;
-	margin: 0;
-	margin-left: 25px;
-	margin-top: 5px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
 
-#legend li{
-	list-style-type: none;
-	position: relative;
-	margin-bottom: 3px;
+#scroll-to-top{
+position: fixed;
+bottom: 16px;
+right: 17px;
+font-size: 19px;
+color: #fff;
+background: #000;
+padding: 6px 9px 5px;
+display: none;
+cursor: pointer;
 }
 
-
-.legend-block{
-	display: inline-block;
-	height:9px;
-	width: 9px;
-	position: absolute;
-	top:4px;
-	left: -23px;
-	-webkit-border-radius:	10px;
-	-moz-border-radius:		10px;
-	border-radius:			10px;
-	margin-right: 5px;
-	background: #ebebeb;
-	border: 1px solid #222;
+#approval-bar .btn
+{
+	background:none;
+	opacity:.8;
+	border-radius:0;
+	border:none;
+	box-shadow:none;
+	padding:7px 0;
+	border-right:1px solid #ccc;
+	width:33%;
+	box-sizing:border-box;
+	text-align:center;
+	-webkit-tap-highlight-color:#ccc
 }
 
-/* -- Map Marker Styling -- */
-
-.legend-block.red, .leaflet-marker-icon .red{
-	background: #E33B35;
-	border-color: #222;
+#approval-bar .deny{
+	width: 34%;
 }
 
-.legend-block.blue, .leaflet-marker-icon .blue{
-	background: #2B95F8;
-	border-color: #222;
+#approval-bar .edpick{
+	border-right: none;
 }
 
-.legend-block.t, .leaflet-marker-icon .t{
-	background: #00acee;
-	border-color: #222;
+#approval-bar .btn-danger
+{
+	background:#e28383
 }
 
-.legend-block.i, .leaflet-marker-icon .i{
-	background: #E33B35;
-	border-color: #222;
+#approval-bar .btn-success
+{
+	background:#b3d78c
 }
 
-#keyword-listing{
-	background: #eee;
-	padding:20px;
-	margin: 0;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 200;
-	border: 1px solid #aaa;
-	border-bottom: none;
-	position: relative;
+img.main-photo
+{
+	width:100%;
+	-webkit-border-radius:2px 2px 0 0;
+	border-radius:2px 2px 0 0
 }
 
-img.main-photo{
-	width: 100%;
-	-webkit-border-radius: 2px 2px 0px 0px;
-	border-radius: 2px 2px 0px 0px;
+navbar
+{
+	padding-left:15px
 }
 
-navbar{
-	padding-left: 15px;
+ul.thumbnails li.span4:nth-child(3n + 4)
+{
+	margin-left:0
 }
 
-ul.thumbnails li.span4:nth-child(3n + 4) {
-  margin-left : 0px;
+ul.thumbnails li.span3:nth-child(4n + 5)
+{
+	margin-left:0
 }
 
-ul.thumbnails li.span3:nth-child(4n + 5) {
-  margin-left : 0px;
+ul.thumbnails li.span12 + li
+{
+	margin-left:0
 }
 
-ul.thumbnails li.span12 + li {
-  margin-left : 0px;
+li
+{
+	list-style-type:none
 }
 
-li{
-	list-style-type: none;
+.tweetWrap
+{
+	margin:3px 10px 2px
 }
 
-.tweetWrap{
-	margin: 3px 10px 2px 10px;
-}
-
-#abs{
-	position: absolute;
+#abs
+{
+	position:absolute;
 	left:190px;
 	top:50px;
 	width:20px;
-	height: 20px;
+	height:20px
 }
 
-#content{
-	float: left;
+#content
+{
+	float:left
 }
 
-.loading{
-	background: url('../js/img/ajax-loader.gif') !important;
-	background-repeat: no-repeat !important;
-	background-position-x: 50% !important;
-	background-position-y: 50% !important;
-	height:400px;
-}
- 
-#map img {
-	max-width: none;
+.loading
+{
+	background:url(../js/img/ajax-loader.gif)!important;
+	background-repeat:no-repeat!important;
+	background-position-x:50%!important;
+	background-position-y:50%!important;
+	height:400px
 }
 
-#map{
-	border: 1px solid #aaa;
-	box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px;
-	background: #fff url('../js/img/ajax-loader.gif') !important;
-	background-repeat: no-repeat !important;
-	background-position-x: 50% !important;
-	background-position-y: 50% !important;
-	height:600px;
-	background: #fff;
-
+#loading
+{
+	text-align:center;
+	z-index:100;
+	position:fixed;
+	left:50%;
+	bottom:40px;
+	width:120px;
+	margin-left:-60px;
+	padding:10px 0;
+	background:#000;
+	opacity:.8;
+	color:#FFF;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	display:none
 }
 
-h1{margin: 10px;}
-
-/* -- Basic Grid Styling -- */
-
-#loading {
-	text-align: center;
-	z-index: 100;
-	position: fixed;
-	left: 50%;
-	bottom: 40px;
-	width: 120px;
-	margin-left: -60px;
-	padding: 10px 0;
-	background: #000;
-	opacity: 0.8;
-	color: #FFF;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	display: none;
+#loading img
+{
+	margin:5px 0
 }
 
-#loading img{
-	margin: 5px 0; 
+#grid
+{
+	margin:0
 }
 
-#grid{
-	margin: 0;
-}
-
-.container-fluid{
-
-}
-
-.grid-card{
+.grid-card
+{
 	width:300px;
-	background: #fff;
-	padding: 0px;
-	left: -1px;
-	border:1px solid #ccc;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	float: left;
-	margin: 0px 0px;
-	margin-bottom: 19px;
-	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), inset 0px -2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -15px 30px 0 rgba(0, 0, 0, 0.05);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), inset 0px -2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -15px 30px 0 rgba(0, 0, 0, 0.05);
-
+	background:#fff;
+	padding:0;
+	left:-1px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	float:left;
+	margin:0;
+	margin-bottom:19px;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.15),inset 0 -2px 0 0 rgba(0,0,0,0.1),inset 0 -15px 30px 0 rgba(0,0,0,0.05);
+	box-shadow:0 1px 3px rgba(0,0,0,0.15),inset 0 -2px 0 0 rgba(0,0,0,0.1),inset 0 -15px 30px 0 rgba(0,0,0,0.05)
 }
 
-/* -- Instagram View Styling -- */
-
-#instagram-container {
-	margin-top:24px!important;
+.ad-card{
+	padding: 1px 20px 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 9px;
 }
 
-.instagram-text {
-	font-family: Helvetica,sans-serif;
+.ad-card p{
+	margin: 0px;
+}
+
+.ad-card img{
+	width:300px;
+
+	margin:0 auto;
+	
+}
+
+#instagram-container
+{
+	margin-top:24px!important
+}
+
+.instagram-text
+{
+	font-family:Helvetica,sans-serif;
 	font-size:13px;
-	line-height:17px;
+	line-height:17px
 }
 
-.instagram-caption {
-	margin:12px 0px;
+.instagram-caption
+{
+	margin:12px 0;
 	font-size:13px;
 	color:#333;
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
+	-ms-word-break:break-all;
+	word-break:break-all;
+	word-break:break-word;
+	-webkit-hyphens:auto;
+	-moz-hyphens:auto;
+	hyphens:auto
 }
 
-.instagram-logo{
-	width: 70px;
+.instagram-logo
+{
+	width:70px
 }
 
-.instagram-user-photo {
+.instagram-user-photo
+{
 	float:left;
 	height:25px;
-	width:25px;
+	width:25px
 }
 
-.instagram-user {
+.instagram-user
+{
 	overflow:hidden;
 	margin-top:12px;
-	font-family: Helvetica,sans-serif;
+	font-family:Helvetica,sans-serif;
 	font-size:11px;
 	line-height:14px;
-	color:#333;
+	color:#333
 }
 
-.instagram-user strong {
-	color:#000;
+.instagram-user strong
+{
+	color:#000
 }
 
-.instagram-name {
-	margin-left:6px;
+.instagram-name
+{
+	margin-left:6px
 }
 
-.instagram-user a {
-	font-family: Helvetica,sans-serif;
+.instagram-user a
+{
+	font-family:Helvetica,sans-serif;
 	font-size:11px;
 	line-height:14px;
 	text-decoration:none;
-	color:#333;
+	color:#333
 }
 
-.instagram-card a {
+.instagram-card a
+{
 	text-decoration:none;
-	color:#666;
+	color:#666
 }
-
-
-/*structure*/
-
-
-
-/* -- Twitter Card Styling -- */
-
-
 
 p.tweet-text
 {
 	font-size:20px;
 	line-height:24px;
-	font-family:"Helvetica Neue", Helvetica, sans-serif;
-	font-weight: 600;
+	font-family:"Helvetica Neue",Helvetica,sans-serif;
+	font-weight:600;
 	color:#2b2b2b;
-	margin:15px 0 0px 0;
+	margin:15px 0 0;
 	white-space:pre-wrap;
 	white-space:-moz-pre-wrap;
 	white-space:-pre-wrap;
 	white-space:-o-pre-wrap;
-	word-wrap:break-word;
+	word-wrap:break-word
 }
 
-img.twitter-media{
-	margin-top: 25px;
-
-	margin-bottom: -10px;
+img.twitter-media
+{
+	margin-top:25px;
+	margin-bottom:-10px
 }
 
-p.tweet-text a, p.tweet-text a:visited
+p.tweet-text a,p.tweet-text a:visited
 {
 	text-decoration:none;
-	font-weight:600;
+	font-weight:600
 }
 
-p.tweet-text a:hover, p.tweet-text a:active
+p.tweet-text a:hover,p.tweet-text a:active
 {
 	color:#2e6d9d;
-	text-decoration:none;
+	text-decoration:none
 }
 
-.account-group{
+.account-group
+{
 	clear:both;
 	display:inline-block;
 	text-align:left;
@@ -434,12 +356,12 @@ p.tweet-text a:hover, p.tweet-text a:active
 	white-space:nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;
-	margin-bottom:10px;
-
+	margin-bottom:10px
 }
 
-img.small-logo{
-	height: 10px;
+img.small-logo
+{
+	height:10px
 }
 
 .account-group img.avatar
@@ -450,16 +372,15 @@ img.small-logo{
 	margin-right:6px;
 	-webkit-border-radius:2px;
 	-moz-border-radius:2px;
-	border-radius:2px;
+	border-radius:2px
 }
 
 .account-group strong.fullname,.account-group span.username
 {
-
-	width: 100%;
+	width:100%;
 	white-space:nowrap;
 	text-overflow:ellipsis;
-	overflow:hidden;
+	overflow:hidden
 }
 
 .account-group strong.fullname
@@ -467,7 +388,7 @@ img.small-logo{
 	font-weight:700;
 	font-size:14px;
 	line-height:17px;
-	color:#767676;
+	color:#767676
 }
 
 .account-group span.username
@@ -475,177 +396,162 @@ img.small-logo{
 	font-weight:400;
 	font-size:12px;
 	line-height:15px;
-	color:#767676;
+	color:#767676
 }
 
 .quote .account-group strong.fullname
 {
 	font-size:11px;
-	line-height:14px;
+	line-height:14px
 }
 
 .quote img.avatar
 {
 	width:30px;
 	height:30px;
-	border:0 none;
+	border:0 none
 }
 
-
-
-.icon-twitter{
-	color: #fff;
-	font-size: 18px;
-	margin: 0;
+.icon-twitter
+{
+	color:#fff;
+	font-size:18px;
+	margin:0;
 	width:20px;
-	height:20px;
-	
+	height:20px
 }
 
-.icon-globe{
-	position: absolute;
-	right: 2px;
-	bottom: 2px;
-	color: #aaa;
-
-	font-size: 1.7em;
-}
-.icon-globe.green{
-
-	color: #7abc34;
+.gallery-preview
+{
+	width:100%;
+	-webkit-border-radius:2px 2px 0 0;
+	border-radius:2px 2px 0 0
 }
 
-.gallery-preview{
-	width: 100%;
-	-webkit-border-radius: 2px 2px 0px 0px;
-	border-radius: 2px 2px 0px 0px;
+.nh-info
+{
+	display:block;
+	padding:15px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:13px
 }
 
-.more{
-	position: fixed;
-	left:50%;
-	bottom:0;
+.nh-card .card-footer
+{
+	padding:0;
+	margin:0 15px 4px;
+	color:#888
 }
 
-.hide{
-	display: none;
+.nh-card .card-footer span
+{
+	display:inline;
+	padding:8px 8px 8px 0
 }
 
-.nh-info{
-	display: block;
-	padding: 15px;
-	padding-top: 5px;	
-	padding-bottom: 5px;
-	font-size: 13px;
+.nh-card .card-footer img
+{
+	padding:13px 10px;
+	margin-right:10px
 }
 
-.nh-card .card-footer{
-	padding: 0px;
-	margin: 0px 15px 4px 15px;
-	color: #888;
-}
-.nh-card .card-footer span{
-	display: inline;
-	padding: 8px 8px 8px 0;
+.instagram-card
+{
+	padding:0;
+	border:none
 }
 
-.nh-card .card-footer img{
-	padding: 13px 10px;
-	margin-right: 10px;
+.gallery-card
+{
+	border:none
 }
 
-.instagram-card{
-	padding: 0px;
-	border: none;
+.story-card
+{
+	border:none
 }
 
-.gallery-card{
-	border: none;
+.nh-info
+{
+	border:none
 }
 
-.story-card{
-	border: none;
+.instagram-card .card-content
+{
+	padding:5px 14px;
+	font-size:13px;
+	font-weight:400
 }
 
-
-.nh-info{
-	border: none;
+.instagram-card .card-footer
+{
+	padding:8px;
+	color:#888
 }
 
-.story-card .nh-info{
-
+.instagram-card .card-footer p
+{
+	margin:0 0 0 10px;
+	display:inline
 }
 
-
-.instagram-card .card-content{
-	padding: 5px 14px;
-	font-size: 13px;
-	font-weight: 400;
-
-
+.instagram-card .card-footer .username a
+{
+	float:right;
+	margin-right:5px;
+	color:#4f7fa4
 }
 
-.instagram-card .card-footer{
-	padding: 8px;
-	color: #888;
+.instagram-card .card-footer i.logo
+{
+	background:url(../img/instagram-block.png);
+	padding:11px 18px;
+	margin-left:-8px;
+	background-position:-8px -10px;
+	background-size:54px
 }
 
-.instagram-card .card-footer p{
-	margin: 0	0 0 10px;
-	display: inline;
-}
-.instagram-card .card-footer .username a{
-	float: right;
-	margin-right: 5px;
-	color: #4f7fa4
+.twitter-card
+{
+	padding:0;
+	border:none
 }
 
-.instagram-card .card-footer i.logo{
-	background: url("../img/instagram-block.png");
-
-	padding: 11px 18px;
-	margin-left: -8px;
-	background-position: -8px -10px;
-	background-size: 54px;
+.twitter-card .card-content
+{
+	padding:14px;
+	padding-bottom:25px
 }
 
-.twitter-card{
-	padding: 0px;	
-	border: none;
-}
-.twitter-card .card-content{
-	padding: 14px;
-
-
-	padding-bottom: 25px;
+.twitter-card .card-footer .logo
+{
+	background:#00acee;
+	padding:9px 8px 7px;
+	float:left
 }
 
-.twitter-card .card-footer .logo{
-	background: #00acee;	
-	padding: 9px 8px 7px 8px;
-	float: left;
-
-}
-.time-container{
-	padding: 2px;
-	float: left;
+.time-container
+{
+	padding:2px;
+	float:left
 }
 
-.card-footer{
-	display: block;
-	font-size: 12px;
-	border-top: 1px solid #ccc;
-
-	padding: 10px 0 0 0px;
-	margin: 0px 15px 15px 15px;
+.card-footer
+{
+	display:block;
+	font-size:12px;
+	border-top:1px solid #ccc;
+	padding:10px 0 0;
+	margin:0 15px 15px
 }
 
 .twitter-card ul
 {
-	border-top: 1px solid #ccc;
-	padding: 0px;
-	text-align: right;
-	height: 36px;
+	border-top:1px solid #ccc;
+	padding:0;
+	text-align:right;
+	height:36px
 }
 
 .twitter-card ul li
@@ -654,25 +560,19 @@ img.small-logo{
 	font-weight:400;
 	color:#6b6b6b;
 	font-size:12px;
-	padding: 8px 0px 8px 8px;
+	padding:8px 0 8px 8px
 }
+
 .twitter-card ul li.favorite-container
-
 {
-	padding-right: 10px;
+	padding-right:10px
 }
 
-.twitter-card ul li a,
-.twitter-card ul li a:hover,
-.twitter-card ul li a:visited,
-.twitter-card ul li a:active,
-.twitter-card ul li a:link
+.twitter-card ul li a,.twitter-card ul li a:hover,.twitter-card ul li a:visited,.twitter-card ul li a:active,.twitter-card ul li a:link
 {
 	color:#888;
-	text-decoration:none;
+	text-decoration:none
 }
-
-
 
 a .icon-reply
 {
@@ -681,17 +581,17 @@ a .icon-reply
 	line-height:16px;
 	vertical-align:text-bottom;
 	background-image:url(../img/twitter-everything.png);
-	background-position:0 0;
+	background-position:0 0
 }
 
 a:hover .icon-reply
 {
-	background-position: -16px 0;
+	background-position:-16px 0
 }
 
 .icon-reply::before
-{ 
-	content:none;
+{
+	content:none
 }
 
 .icon-retweets
@@ -701,11 +601,12 @@ a:hover .icon-reply
 	line-height:16px;
 	vertical-align:text-bottom;
 	background-image:url(../img/twitter-everything.png);
-	background-position:-80px 0;
+	background-position:-80px 0
 }
 
-a:hover .icon-retweets{
-	background-position: -96px 0;
+a:hover .icon-retweets
+{
+	background-position:-96px 0
 }
 
 .icon-favorite
@@ -715,22 +616,23 @@ a:hover .icon-retweets{
 	line-height:16px;
 	vertical-align:text-bottom;
 	background-image:url(../img/twitter-everything.png);
-	background-position:-32px 0;
+	background-position:-32px 0
 }
 
-a:hover .icon-favorite {
-	background-position: -48px 0;
+a:hover .icon-favorite
+{
+	background-position:-48px 0
 }
 
 .twitter-card ul li a b
 {
 	font-weight:400;
-	display:none;
+	display:none
 }
 
-li.reply-container, li.retweet-container
+li.reply-container,li.retweet-container
 {
-	margin-right:10px;
+	margin-right:10px
 }
 
 .share-icon,.share-icon a,.share-icon span,.share-icon a span
@@ -739,53 +641,75 @@ li.reply-container, li.retweet-container
 	line-height:24px;
 	font-weight:400;
 	color:#2b2b2b;
-	text-decoration:none;
+	text-decoration:none
 }
 
 .share-icon a:hover,.share-icon a:active,.share-icon a:hover span,.share-icon a:active span
 {
 	color:#2e6d9d;
-	text-decoration:none;
+	text-decoration:none
 }
 
 .share-icon a:visited,.share-icon a:visited span
 {
 	color:#4b4b4b;
-	text-decoration:none;
+	text-decoration:none
 }
 
-
-@media (max-width: 600px){
-	body{
-		padding: 0px;
-		padding-top: 50px;
+@media (max-width: 600px) {
+	body
+	{
+		padding:0;
+		padding-top:30px
 	}
 	
-	#grid{
-		margin-top: 20px;
+	#grid
+	{
+		margin-top:20px
 	}
 	
-	#map{
-		border: none;
-		height:100%;
-	}
-	.navbar-inner{
-		//padding: 0px 0px 0px 20px;
+	#map
+	{
+		border:none;
+		height:100%
 	}
 	
-	.navbar-fixed-top{ margin: 0px; position: absolute; top: 0px;}
-	.grid-card{
-		border: none;
-		border-bottom: 1px solid #ccc;
-		box-shadow: none;
-		padding-top: 0px;
-		margin-bottom: 0px;
-	}	
-	
-	.icon-globe{
-		right: 9px;
-		bottom: 10px;
+	.navbar-fixed-top
+	{
+		margin:0;
+		position:absolute;
+		top:0
 	}
-	#approval-bar .btn {
-	padding: 15px 25px;
+	
+	#scroll-to-top{
+		position: fixed;
+		bottom: 16px;
+		right: 17px;
+		font-size: 19px;
+		color: #fff;
+		background: #000;
+		padding: 6px 9px 5px;
+		display: none;
+		cursor: pointer;
+	}
+	
+	.grid-card
+	{
+		border:none;
+		border-bottom:1px solid #ccc;
+		box-shadow:none;
+		padding-top:0;
+		margin-bottom:0
+	}
+	
+	.icon-globe
+	{
+		right:9px;
+		bottom:10px
+	}
+	
+	#approval-bar .btn
+	{
+		padding:15px 25px
+	}
 }
