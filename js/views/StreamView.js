@@ -25,6 +25,8 @@ window.StreamView = Backbone.View.extend({
         
         if(this.model.pagination(this.addNum,this.page+1).length !== 0 && $(window).scrollTop() + $(window).height() + triggerPoint > $(document).height() && this.scrolled == 0){
 
+	        //track add more events in google analytics
+
             if(this.options.approval == 0){
                 _gaq.push(['_trackEvent',
                     'Stream View', // category of activity
@@ -37,11 +39,13 @@ window.StreamView = Backbone.View.extend({
             this.page++;
             this.scrolled = 1;
             _.each(this.model.pagination(this.addNum,this.page), function(card){
-            
-                if(card.get('type') == 'i')             var content = new InstagramItemView({model:card}).render().el;
-                else if(card.get('type') == 't')        var content = new TwitterItemView({model:card}).render().el;
-                else if(card.get('type') == 'gallery')  var content = new GalleryItemView({model:card}).render().el;
-                else if(card.get('type') == 'story')    var content = new StoryItemView({model:card}).render().el;
+            	
+            	var content;
+            	
+                if(card.get('type') == 'i')             content = new InstagramItemView({model:card}).render().el;
+                else if(card.get('type') == 't')        content = new TwitterItemView({model:card}).render().el;
+                else if(card.get('type') == 'gallery')  content = new GalleryItemView({model:card}).render().el;
+                else if(card.get('type') == 'story')    content = new StoryItemView({model:card}).render().el;
                 
                 if(this.options.approval == 1)          $(content).append(new ApprovalBarView({model:card}).render().el);
                 
@@ -85,11 +89,12 @@ window.StreamView = Backbone.View.extend({
 
             
             _.each(this.model.pagination(this.startNum,this.page), function(card){
-                
-                if(card.get('type') == 'i')             var content = new InstagramItemView({model:card}).render().el;
-                else if(card.get('type') == 't')        var content = new TwitterItemView({model:card}).render().el;
-                else if(card.get('type') == 'gallery')  {var content = new GalleryItemView({model:card}).render().el;}
-                else if(card.get('type') == 'story')    var content = new StoryItemView({model:card}).render().el;
+                	
+                var content;
+                if(card.get('type') == 'i')             content = new InstagramItemView({model:card}).render().el;
+                else if(card.get('type') == 't')        content = new TwitterItemView({model:card}).render().el;
+                else if(card.get('type') == 'gallery')  content = new GalleryItemView({model:card}).render().el;
+                else if(card.get('type') == 'story')    content = new StoryItemView({model:card}).render().el;
                 
                 //if in approval view, add approval bar
                 if(this.options.approval == 1)          $(content).append(new ApprovalBarView({model:card}).render().el);
