@@ -81,7 +81,10 @@ window.StreamView = Backbone.View.extend({
 					});
 					count += Math.floor(Math.random() * 5 + 4);
 				}, this);
-				//$(this.el).append($(new AdItemView().render().el).css({opacity: 0}));
+				$ad = $(new AdItemView().render().el).css({opacity: 0})
+				var ord = window.ord || Math.floor(Math.random() * 1e16);
+				$ad.append('<a href="http://ad.doubleclick.net/N5434/jump/pc.newsherald/pcnhSpringBreak;sz=300x250;ord=' + ord + '?"><img src="http://ad.doubleclick.net/N5434/ad/pc.newsherald/pcnhSpringBreak;sz=300x250;ord=' + ord + '?" width="300" height="250" /></a>');
+				$(this.el).append($ad);
 			}
 			_.each(this.model.pagination(this.startNum, this.page), function(card) {
 				var content;

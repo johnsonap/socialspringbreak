@@ -125,7 +125,11 @@
 			<span class="card-footer"><img class="small-logo" src="img/newsherald-small.png"><span><%= prettyTime %></span></span>
 		</script>
 		
-		<script type="text/template" id="ad-list-item"> <p>Advertisement</p> <img src="http://placehold.it/300x250"/></script>
+		<script type="text/template" id="ad-list-item">
+			<p>Advertisement</p> 
+
+
+		</script>
 		
 		<script type="text/template" id="approval-bar">
 			<span class="btn btn-mini<% if(approved == '1'){ %> btn-success <% } %> approve">Approve</span><span class="btn btn-mini<% if(approved == '-1'){ %> btn-danger <%  } %> deny">Deny</span><span class="btn btn-mini<% if(approved == '2'){ %> btn-success <% } %> edpick">Editor's Pick</span>
