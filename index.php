@@ -41,9 +41,19 @@
 	        			<ul class="nav">
 	        				<li class="active"><a href="#">Stream</a></li>
 	        				<li class="active"><a href="#about">About</a></li>
+	        				
 	        			</ul>
+	        			<ul class="nav pull-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Share<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="non"><a tabindex="-1" href="#facebook">Facebook</a></li>
+									<li class="non"><a tabindex="-1" href="#twitter">Twitter</a></li>
+								</ul>
+							</li>
+						</ul>
 	        		</div>
-	        		<img class="hidden-phone" src="img/newsherald-inverted.png" id="logo" />
+	        		<img class="hidden-phone pull-right" src="img/newsherald-inverted.png" id="logo" />
 	        	</div>
 	        </div>
         </div>
@@ -141,6 +151,7 @@
 		<script src="js/jquery.masonry.min.js"></script>
 		<script src="js/underscore.js"></script>
 		<script src="js/backbone.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/moment.min.js"></script>
 		<script src="js/models/models.js"></script>     
 		<script src="js/views/StreamView.js"></script>   
