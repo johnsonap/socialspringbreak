@@ -80,15 +80,20 @@ function storyList(){
 }
 
 
-
+//this is the reader's view
 function approved(){
+
 	getCards(0);
 }
 
+
+//this is for admin curation of approved posts
 function onlyapproved(){
 	getCards(2);
 }
 
+
+//this is for approving new posts
 function all(){
 	getCards(1);
 }
@@ -107,7 +112,7 @@ function getCards($approved) {
 	}
 	
 	else if($approved == 0){
-		$sql = "SELECT * FROM cards WHERE approved>=1 ORDER BY time DESC LIMIT 300";	
+		$sql = "SELECT * FROM cards WHERE approved>=1 ORDER BY time DESC LIMIT 100";	
 	}
 	try {
 		
