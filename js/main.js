@@ -8,6 +8,7 @@ window.AppRouter = Backbone.Router.extend({
         "onlyapproved" : 'onlyapproved'
     },
     about: function(){
+    	$(window).unbind();
     	if($('#grid').masonry()) $('#grid').masonry('destroy');
     	$('.grid-card').css({opacity: 0});
         $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -18,6 +19,7 @@ window.AppRouter = Backbone.Router.extend({
         $('#scroll-to-top').fadeOut();
     },
     stream: function(){
+    	$(window).unbind();
 	    if($('#grid').masonry()) $('#grid').masonry('destroy');
     	$('.grid-card').css({opacity: 0});
     	$('.ad-card').show();
@@ -34,12 +36,14 @@ window.AppRouter = Backbone.Router.extend({
         $('#loading').fadeIn();
     },
     approval: function(){
+    	$(window).unbind();
 	    if($('#grid').masonry()) $('#grid').masonry('destroy');
 	    $('.grid-card').css({opacity: 0});
         $("html, body").animate({ scrollTop: 0 }, "slow");
         allCards = new AllCards();
         allCards.fetch();
         $('.nav li').removeClass('active');
+        
         var approvalView = new StreamView({model: allCards, approval: 1});
         $('#about').hide();
         $('#grid').show();
@@ -49,6 +53,7 @@ window.AppRouter = Backbone.Router.extend({
         $('#loading').fadeIn();
     },
     onlyapproved: function(){
+
     	if($('#grid').masonry()) $('#grid').masonry('destroy');
     	$('.grid-card').css({opacity: 0});
         $("html, body").animate({ scrollTop: 0 }, "slow");

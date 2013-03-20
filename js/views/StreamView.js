@@ -5,7 +5,7 @@ window.StreamView = Backbone.View.extend({
 		this.model.bind("reset", this.render, this);
 		this.page = 1;
 		_.bindAll(this, 'addMore');
-		$(window).scroll(this.addMore);
+		$(window).bind('scroll',this.addMore);
 		$('#scroll-to-top').click(function() {
 			$("html, body").animate({
 				scrollTop: 0
@@ -110,7 +110,7 @@ window.StreamView = Backbone.View.extend({
 			this.page = this.page + (this.startNum / this.addNum);
 
 			$('#grid').imagesLoaded(function() {
-				var cW = 300;
+				var cW = 310;
 				var gW = 19;
 				$('#grid').masonry({
 					itemSelector: '.grid-card:visible',

@@ -38,10 +38,10 @@
 	        			<span class="icon-bar"></span>
 	        			<span class="icon-bar"></span>
 	        		</a>	
-	        		<a class="brand" href="#">Social Spring Break</a>
+	        		<a class="brand" href="/">Social Spring Break</a>
 	        		<div class="nav-collapse collapse">
 	        			<ul class="nav">
-	        				<li class="active"><a href="#">Stream</a></li>
+	        				<li class="active"><a href="/">Stream</a></li>
 	        				<li class="active"><a href="#about">About</a></li>
 	        				
 	        			</ul>
@@ -144,13 +144,13 @@
 			
 		<!-- JavaScript -->
 		
-		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="js/jquery.masonry.min.js"></script>
 		<script src="js/underscore.js"></script>
 		<script src="js/backbone.js"></script>
-		<script src="js/moment.min.js"></script>
-		<script src="js/models/models.js"></script>     
-		<script src="js/views/StreamView.js"></script>   
+		<script src="js/moment.min.js?v=1002"></script>
+		<script src="js/models/models.js?v=1003"></script>     
+		<script src="js/views/StreamView.js?v=1003"></script>   
 
 		<script> 	
 			window.galleryList = new GalleryList(<?php
