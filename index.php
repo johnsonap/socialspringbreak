@@ -26,7 +26,7 @@
 		<meta property="twitter:image" content="http://pcnhhalifax.com/springbreak/img/preview.jpg">
 		
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 
 	<body>
@@ -146,7 +146,6 @@
 		<!-- JavaScript -->
 		
 		<script src="js/jquery-1.7.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
 		<script src="js/jquery.masonry.min.js"></script>
 		<script src="js/underscore.js"></script>
 		<script src="js/backbone.js"></script>
