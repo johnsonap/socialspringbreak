@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Social Spring Break</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+		<meta name="description" content="Every year thousands of college kids on spring break make the drive south to Panama City Beach, Fla. With the rise of the smart phone, more and more young people are now using social media to document every moment of their lives. Here, we tell the story of spring break in Panama City Beach by using the tweets and instagrams of those on spring break.">
+		<meta name="viewport" content="width=device-width">
 		<meta content='Social Spring Break' name='Every year thousands of college kids on spring break make the drive south to Panama City Beach, Fla. With the rise of the smart phone, more and more young people are now using social media to document every moment of their lives. Here, we tell the story of spring break in Panama City Beach by using the tweets and instagrams of those on spring break.'/>
 
 		<!-- meta tags for facebook -->
@@ -43,25 +45,35 @@
 	        				<li class="active"><a href="#about">About</a></li>
 	        				
 	        			</ul>
-	        			<ul class="nav pull-right">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Share<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li class="non"><a tabindex="-1" href="#facebook">Facebook</a></li>
-									<li class="non"><a tabindex="-1" href="#twitter">Twitter</a></li>
-								</ul>
-							</li>
+	        			<ul class="branding nav pull-right">
+							<li><a href="http://bit.ly/YTBMXf" title="Share on Twitter" alt="Share on Twitter"><i class="icon-twitter"></i></a></li>
+							<li id="logo"><a href="http://www.newsherald.com"><img class="hidden-phone pull-right" src="img/newsherald-inverted.png" id="logo" /></a></li>
 						</ul>
 	        		</div>
-	        		<img class="hidden-phone pull-right" src="img/newsherald-inverted.png" id="logo" />
+
 	        	</div>
 	        </div>
         </div>
 
 		<div class="container-fluid">
-			<div class="row-fluid" id="main"></div>
+			
+			<div class="row-fluid" id="main">
+
+				<ul clas="grid" id="grid">	
+					<li class="grid-card ad-card">
+						<p>Advertisement</p>
+						<!-- pc.newsherald/pcnhSpringBreak -->
+						<script type="text/javascript">
+						  var ord = window.ord || Math.floor(Math.random() * 1e16);
+						  document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5434/adj/pc.newsherald/pcnhSpringBreak;sz=300x250;ord=' + ord + '?"><\/script>');
+						</script>
+					</li>
+				</ul>
+				<div id="about"></div>
+			</div>
 			<div id="loading"><img alt="Loading..." src="img/load.gif"></div>
 			<div id="scroll-to-top"><i class="icon-arrow-up"></i></div>
+			
 		</div>
 		
 		<script type="text/template" id="tpl-about">
@@ -91,16 +103,13 @@
 		    <span class="card-footer"><div class="logo"><i class="logo"></i></div><%= fromNow %> <span class="username"><a href="http://instagram.com/<%= data.user.username %>" target="_blank">@<%= data.user.username %></a></span> </span>
 		
 		</script>
-		
 		<script type="text/template" id="twitter-list-item">
-			
 			<div class="card-content">
 				<a class="account-group" href="http://twitter.com/<%= data.user.screen_name %>" target="_blank">
-				<img class="avatar" src="<%= data.user.profile_image_url %>" alt="<%= data.user.screen_name %>">
+				<img class="avatar" height="20" width="20" src="<%= data.user.profile_image_url %>" alt="<%= data.user.screen_name %>">
 				<strong class="fullname"><%= data.user.name %></strong> <span class="username">@<%= data.user.screen_name %></span>
 			</a>	
 				<p class="tweet-text"><%= indexedtext %></p>
-			
 			</div>
 			<ul class="card-footer">
 				<li class="logo"><i class="icon-twit"></i></li>
@@ -111,36 +120,25 @@
 			</ul>	
 			<div class="clear"></div>
 		</script>
-		
 		<script type="text/template" id="story-list-item">
-
 			<img class="gallery-preview" src="<%= imageUrl %>" />
 			<span class="nh-info">
 				<h4><a href="<%= link %>" target="_blank"><%= title %></a></h4>
 				<p> <%= description %> </p>
 			</span>	
-
 			<span class="card-footer"><img class="small-logo" src="img/newsherald-small.png"><span><%= prettyTime %> </span></span>
-
 		</script>
-		
 		<script type="text/template" id="gallery-list-item">
-
 			<a href="<%= albumlink %>"><img class="gallery-preview" src="<%= photos.photo[0].preview %>" /></a>
 			<span class="nh-info">
 				<h4><a href="<%= albumlink %>" target="_blank"><%= albumname %></a></h4>
 				<p> <%= description %> </p>
-				
 			</span> 
 			<span class="card-footer"><img class="small-logo" src="img/newsherald-small.png"><span><%= prettyTime %></span></span>
 		</script>
-		
 		<script type="text/template" id="ad-list-item">
-			<p>Advertisement</p> 
-
-
+			<p>Advertisement</p>
 		</script>
-		
 		<script type="text/template" id="approval-bar">
 			<span class="btn btn-mini<% if(approved == '1'){ %> btn-success <% } %> approve">Approve</span><span class="btn btn-mini<% if(approved == '-1'){ %> btn-danger <%  } %> deny">Deny</span><span class="btn btn-mini<% if(approved == '2'){ %> btn-success <% } %> edpick">Editor's Pick</span>
 		</script>
@@ -148,10 +146,10 @@
 		<!-- JavaScript -->
 		
 		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<script src="js/jquery.masonry.min.js"></script>
 		<script src="js/underscore.js"></script>
 		<script src="js/backbone.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 		<script src="js/moment.min.js"></script>
 		<script src="js/models/models.js"></script>     
 		<script src="js/views/StreamView.js"></script>   
@@ -250,7 +248,7 @@
 			<img src="http://freedom.112.2o7.net/b/ss/finewsherald/1/H.25.1--NS/0" height="1" width="1" border="0" alt="" />
 		</noscript><!--/DO NOT REMOVE/-->
 		<!-- End SiteCatalyst code version: H.25.1. -->
-
+		
 		
 	</body>
 </html>

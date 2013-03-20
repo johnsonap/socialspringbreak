@@ -11,12 +11,25 @@ body
 	background:#7A8794
 }
 
+
+#ad{
+	opacity: 0;
+}
 h1
 {
 	margin:10px
 }
 
-img#logo
+ul.branding.nav li a{
+padding: 9px 7px 0px 7px;
+font-size: 1.7em;
+}
+
+li#logo a{
+	padding: 0px;
+	height: 38px;
+}
+li#logo a img
 {
 	width:200px;
 	height: 19px;
@@ -224,10 +237,11 @@ li
 }
 
 .ad-card{
-	padding: 1px 20px 20px;
+	padding: 1px 0px 12px 0px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 9px;
+	opacity: 0;
 }
 
 .ad-card p{
