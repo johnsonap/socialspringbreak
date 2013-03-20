@@ -62,7 +62,6 @@
 				<ul clas="grid" id="grid">	
 					<li class="grid-card ad-card">
 						<p>Advertisement</p>
-						<!-- pc.newsherald/pcnhSpringBreak -->
 						<script type="text/javascript">
 						  var ord = window.ord || Math.floor(Math.random() * 1e16);
 						  document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5434/adj/pc.newsherald/pcnhSpringBreak;sz=300x250;ord=' + ord + '?"><\/script>');

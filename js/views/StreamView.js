@@ -108,8 +108,8 @@ window.StreamView = Backbone.View.extend({
 				$('#grid').append($(content));
 			}, this);
 			this.page = this.page + (this.startNum / this.addNum);
-			var $container = $('#grid');
-			$container.imagesLoaded(function() {
+
+			$('#grid').imagesLoaded(function() {
 				var cW = 300;
 				var gW = 19;
 				$('#grid').masonry({
