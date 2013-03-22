@@ -10,14 +10,7 @@ window.StoryList = Backbone.Collection.extend({
 
 window.ApprovedCardList = Backbone.Collection.extend({
 	model:Card,
-	url: 'api/approved',  
-    pagination : function(perPage, page) {
-    	var collection = this; 
-	    page = page-1;
-	    collection = _(collection.rest(perPage*page));
-	    collection = _(collection.first(perPage));    
-    	return collection.map( function(model) { return model; } ); 
-    }
+	url: 'api/approved'
 });
 
 window.AllApprovedCards = Backbone.Collection.extend({
@@ -34,12 +27,5 @@ window.AllApprovedCards = Backbone.Collection.extend({
 
 window.AllCards = Backbone.Collection.extend({
 	model:Card,
-	url: 'api/allcards',
-    pagination : function(perPage, page) {
-	    var collection = this; 
-		page = page-1;
-		collection = _(collection.rest(perPage*page));
-		collection = _(collection.first(perPage));    
-		return collection.map( function(model) { return model; } ); 
-    }
+	url: 'api/allcards'
 });

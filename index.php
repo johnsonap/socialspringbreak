@@ -38,10 +38,10 @@
 	        			<span class="icon-bar"></span>
 	        			<span class="icon-bar"></span>
 	        		</a>	
-	        		<a class="brand" href="/">Social Spring Break</a>
+	        		<a class="brand" href="#">Social Spring Break</a>
 	        		<div class="nav-collapse collapse">
 	        			<ul class="nav">
-	        				<li class="active"><a href="/">Stream</a></li>
+	        				<li class="active"><a href="#">Stream</a></li>
 	        				<li class="active"><a href="#about">About</a></li>
 	        				
 	        			</ul>
@@ -90,7 +90,7 @@
 		
 		<!-- Templates -->		
 		<script type="text/template" id="instagram-list-item">
-			
+
 			<a target="_blank" href="<%=data.link %>" target="_blank">
 				<img class="main-photo" src="<%= data.images.standard_resolution.url %>"/>
 			</a>
@@ -103,6 +103,7 @@
 		
 		</script>
 		<script type="text/template" id="twitter-list-item">
+
 			<div class="card-content">
 				<a class="account-group" href="http://twitter.com/<%= data.user.screen_name %>" target="_blank">
 				<img class="avatar" height="20" width="20" src="<%= data.user.profile_image_url %>" alt="<%= data.user.screen_name %>">
@@ -148,6 +149,7 @@
 		<script src="js/jquery.masonry.min.js"></script>
 		<script src="js/underscore.js"></script>
 		<script src="js/backbone.js"></script>
+		<script src="js/backbone.paginator.min.js"></script>
 		<script src="js/moment.min.js?v=1002"></script>
 		<script src="js/models/models.js?v=1003"></script>     
 		<script src="js/views/StreamView.js?v=1003"></script>   
