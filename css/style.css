@@ -2,67 +2,73 @@
 	
 }
 
-body {
+body
+{
 	padding-top:60px
 }
-	
+
 body
 {
 	background:#7A8794
 }
 
-
-#ad{
-	opacity: 0;
+#ad
+{
+	opacity:0
 }
+
 h1
 {
 	margin:10px
 }
 
-ul.branding.nav li a{
-padding: 9px 7px 0px 7px;
-font-size: 1.7em;
+ul.branding.nav li a
+{
+	padding:9px 7px 0;
+	font-size:1.7em
 }
 
-li#logo a{
-	padding: 0px;
-	height: 38px;
+li#logo a
+{
+	padding:0;
+	height:38px
 }
+
 li#logo a img
 {
 	width:200px;
-	height: 19px;
+	height:19px;
 	float:right;
-	margin: 10px 5px 0;
+	margin:10px 5px 0
 }
 
-.box{
-	background: #fff;
-	padding: 20px 30px;;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
-	
+.box
+{
+	background:#fff;
+	padding:20px 30px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
 }
 
-
-.box p{
-	margin-bottom: 15px;
+.box p
+{
+	margin-bottom:15px
 }
 
-.text-right{
-	text-align: right;
+.text-right
+{
+	text-align:right
 }
 
-.text-center{
-	text-align: center;
+.text-center
+{
+	text-align:center
 }
 
-.box h1{
-	text-align: center;
-	margin-bottom: 30px;
-	
+.box h1
+{
+	text-align:center;
+	margin-bottom:30px
 }
 
 .navbar-inverse .navbar-inner
@@ -84,18 +90,6 @@ img#logo.visible-phone
 	-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
 
-#scroll-to-top{
-position: fixed;
-bottom: 16px;
-right: 17px;
-font-size: 30px;
-color: #fff;
-background: #000;
-padding: 10px 11px 5px;
-display: none;
-cursor: pointer;
-}
-
 #approval-bar .btn
 {
 	background:none;
@@ -111,12 +105,14 @@ cursor: pointer;
 	-webkit-tap-highlight-color:#ccc
 }
 
-#approval-bar .deny{
-	width: 34%;
+#approval-bar .deny
+{
+	width:34%
 }
 
-#approval-bar .edpick{
-	border-right: none;
+#approval-bar .edpick
+{
+	border-right:none
 }
 
 #approval-bar .btn-danger
@@ -236,23 +232,24 @@ li
 	box-shadow:0 1px 3px rgba(0,0,0,0.15),inset 0 -2px 0 0 rgba(0,0,0,0.1),inset 0 -15px 30px 0 rgba(0,0,0,0.05)
 }
 
-.ad-card{
-	padding: 1px 0px 12px 0px;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 9px;
-	opacity: 0;
+.ad-card
+{
+	padding:1px 0 12px;
+	text-align:center;
+	text-transform:uppercase;
+	font-size:9px;
+	opacity:0
 }
 
-.ad-card p{
-	margin: 0px;
+.ad-card p
+{
+	margin:0
 }
 
-.ad-card img{
+.ad-card img
+{
 	width:300px;
-
-	margin:0 auto;
-	
+	margin:0 auto
 }
 
 #instagram-container
@@ -372,9 +369,18 @@ p.tweet-text a:hover,p.tweet-text a:active
 	margin-bottom:10px
 }
 
-* html .account-group { display:inline; }  /* for IE 6 */
-* + html .account-group { display:inline; }  /* for IE 7 */
+* html .account-group
+{
+	display:inline
+}
 
+/* for IE 6 */
+* + html .account-group
+{
+	display:inline
+}
+
+/* for IE 7 */
 img.small-logo
 {
 	height:10px
@@ -433,21 +439,19 @@ img.small-logo
 	color:#fff;
 	font-size:18px;
 	margin:0;
-
-	padding:0px;
+	padding:0;
 	height:36px;
-	width: 36px !important;
-	background: url('../img/twitter-block-small.png');
-
+	width:36px!important;
+	background:url(../img/twitter-block-small.png)
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),  ( min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1),  (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) { 
-      .icon-twit {	
-        background-image: url('../img/twitter-block.png');
-        background-size: cover;
-      }
+@media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 21),(min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
+	.icon-twit
+	{
+		background-image:url(../img/twitter-block.png);
+		background-size:cover
+	}
 }
-
 
 .gallery-preview
 {
@@ -533,16 +537,18 @@ img.small-logo
 
 .instagram-card .card-footer i.logo
 {
-	background:url('../img/instagram-block-small.png');
-	margin: -8px 0 0 -8px;
+	background:url(../img/instagram-block-small.png);
+	margin:-8px 0 0 -8px
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),  ( min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1),  (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) { 
-      .instagram-card .card-footer i.logo {	
-        background-image: url('../img/instagram-block.png');
-        background-size: cover;
-      }
+@media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 21),(min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
+	.instagram-card .card-footer i.logo
+	{
+		background-image:url(../img/instagram-block.png);
+		background-size:cover
+	}
 }
+
 .twitter-card
 {
 	padding:0;
@@ -557,10 +563,9 @@ img.small-logo
 
 .card-footer .logo
 {
-
-	padding:0px;
+	padding:0;
 	height:36px;
-	width: 36px;
+	width:36px;
 	float:left
 }
 
@@ -596,9 +601,18 @@ img.small-logo
 	padding:8px 0 8px 8px
 }
 
-* html .twitter-card ul li { display:inline; }  /* for IE 6 */
-* + html .twitter-card ul li { display:inline; }  /* for IE 7 */
+* html .twitter-card ul li
+{
+	display:inline
+}
 
+/* for IE 6 */
+* + html .twitter-card ul li
+{
+	display:inline
+}
+
+/* for IE 7 */
 .twitter-card ul li.favorite-container
 {
 	padding-right:10px
