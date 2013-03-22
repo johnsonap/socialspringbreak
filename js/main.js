@@ -28,6 +28,7 @@ window.AppRouter = Backbone.Router.extend({
         $('.nav li:nth-child(1)').addClass('active');
 
         window.paginatedItems = new Pagination();
+        $('#loading').fadeIn();
         paginatedItems.goTo(0, {success: function(){
 	        
 	        var streamView = new StreamView({model: paginatedItems, approval: 0});
@@ -35,7 +36,7 @@ window.AppRouter = Backbone.Router.extend({
 	        $('#grid').show();
 	        $('#grid li:not(.ad-card)').remove();
 	        streamView.render();
-	        $('#loading').fadeIn();
+	        
         }});
         
         
@@ -48,6 +49,7 @@ window.AppRouter = Backbone.Router.extend({
 
         $('.nav li').removeClass('active');
         window.adminPaginatedItems = new AdminPagination();
+         $('#loading').fadeIn();
         adminPaginatedItems.goTo(0, {success: function(){
 	        var approvalView = new StreamView({model: adminPaginatedItems, approval: 1});
 	        $('#about').hide();
@@ -55,7 +57,7 @@ window.AppRouter = Backbone.Router.extend({
 	        $('#grid li:not(.ad-card)').remove();
 	        $('.ad-card').hide();
 	        approvalView.render();
-	        $('#loading').fadeIn();
+	       
 	    }});
 	},
     onlyapproved: function(){
@@ -66,6 +68,7 @@ window.AppRouter = Backbone.Router.extend({
         $('.nav li').removeClass('active');
         
         window.approvedPaginatedItems = new Pagination();
+        $('#loading').fadeIn();
         approvedPaginatedItems.goTo(0, {success: function(){
 	        
 	        $('#about').hide();
@@ -74,7 +77,7 @@ window.AppRouter = Backbone.Router.extend({
         $('.ad-card').hide();
         var onlyApprovedView = new StreamView({model: approvedPaginatedItems, approval: 1});
         onlyApprovedView.render()
-        $('#loading').fadeIn();
+        
         }});
         
     }

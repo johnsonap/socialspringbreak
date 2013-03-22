@@ -149,7 +149,7 @@ window.StreamView = Backbone.View.extend({
 			
 			_.each(this.model.models, function(card) {
 				
-				window.id.push(card.get('id'));
+				
 				card.set('fromNow', moment.unix(card.get('time')).fromNow());
 				var content;
 				if (card.get('type') == 'i') content = new InstagramItemView({
@@ -165,7 +165,12 @@ window.StreamView = Backbone.View.extend({
 				$(content).css({
 					opacity: 0
 				});
-				$('#grid').append($(content));
+				if($.inArray(card.get('id'), window.id) !== -1) {
+
+				}else{
+					$('#grid').append($(content));
+				}
+				window.id.push(card.get('id'));
 			}, this);
 			var scroll = this.scrolled;
 			this.model.nextPage({success: $.proxy(function(){
@@ -209,7 +214,7 @@ window.StreamView = Backbone.View.extend({
 
 		}
 		_.each(this.model.models, function(card) {
-			
+
 			window.id.push(card.get('id'));
 			card.set('fromNow', moment.unix(card.get('time')).fromNow());
 			
