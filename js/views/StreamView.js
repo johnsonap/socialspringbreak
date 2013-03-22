@@ -122,11 +122,6 @@ window.StreamView = Backbone.View.extend({
 		this.page = 1;
 		_.bindAll(this, 'addMore');
 		$(window).bind('scroll',this.addMore);
-		$('#scroll-to-top').click(function() {
-			$("html, body").animate({
-				scrollTop: 0
-			}, "slow");
-		});
 		this.model.approval = this.options.approval;
 		this.scrolled = 0;
 		this.startNum = 30;
@@ -261,7 +256,7 @@ window.StreamView = Backbone.View.extend({
 			$('.grid-card').animate({
 				opacity: 1
 			}, 1000);
-			$('#scroll-to-top').fadeIn();
+
 			$('#loading').fadeOut();
 		});
 		return this;

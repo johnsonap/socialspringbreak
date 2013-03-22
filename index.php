@@ -71,7 +71,6 @@
 				<div id="about"></div>
 			</div>
 			<div id="loading"><img alt="Loading..." src="img/load.gif"></div>
-			<div id="scroll-to-top"><i class="icon-arrow-up"></i></div>
 			
 		</div>
 		

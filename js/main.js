@@ -16,7 +16,6 @@ window.AppRouter = Backbone.Router.extend({
         $('#about').show();
         $('#about').html($('#tpl-about').html());
         $('#loading').hide();
-        $('#scroll-to-top').fadeOut();
     },
     stream: function(){
     	$(window).unbind('scroll');
