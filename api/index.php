@@ -341,14 +341,13 @@ function connection(){
 }
 
 function getConnection() {
-	//$db = mysql_connect('us-cdbr-east-03.cleardb.com', 'b24494b101618e', 'f4086d3b');
-	//mysql_select_db('heroku_f5a1439c5c23343');
 
 
-	$dbhost="us-cdbr-east-03.cleardb.com";
-	$dbuser="b5851e00f0aaf0";
-	$dbpass="7150e2d4";
-	$dbname="heroku_dea78be05d07379";
+
+	$dbhost="host";
+	$dbuser="user";
+	$dbpass="pass";
+	$dbname="db";
 	$dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	return $dbh;
